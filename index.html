@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Адаптивность -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Спортивный клуб Арена</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Простая анимация появления элементов */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 0.6s ease;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-black text-yellow-400 font-sans">
+
+  <!-- =======================
+       ШАПКА
+  ========================== -->
+  <header class="p-6 border-b border-yellow-600 text-center">
+    <h1 class="text-4xl font-bold">Спортивный клуб «Арена»</h1>
+  </header>
+
+  <!-- =======================
+       БЛОК "О НАС"
+  ========================== -->
+  <section class="p-8 max-w-3xl mx-auto text-center fade-up">
+    <h2 class="text-3xl font-bold mb-4">О нас</h2>
+    <p class="text-lg">Адрес: просп. Ленина, 35Б, Димитровград</p>
+    <p class="text-lg">Режим работы: пн–пт 07:00–22:00; сб–вс 08:00–21:00</p>
+  </section>
+
+  <!-- =======================
+       ТРЕНИРОВКИ
+  ========================== -->
+  <section class="p-8 fade-up">
+    <h2 class="text-3xl font-bold text-center mb-8">Виды тренировок</h2>
+
+    <!-- Сетка карточек -->
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Карточка 1 -->
+      <div class="bg-neutral-900 p-6 rounded-xl border border-yellow-600 shadow-lg">
+        <h3 class="text-2xl font-bold mb-2">Функциональный тренинг</h3>
+        <p class="mb-3 text-sm text-yellow-300">
+          Тренировки на развитие силы, выносливости и гибкости.
+        </p>
+        <p class="text-sm">Расписание: пн/ср/пт — 18:00</p>
+      </div>
+
+      <!-- Карточка 2 -->
+      <div class="bg-neutral-900 p-6 rounded-xl border border-yellow-600 shadow-lg">
+        <h3 class="text-2xl font-bold mb-2">Силовые тренировки</h3>
+        <p class="mb-3 text-sm text-yellow-300">
+          Работа с весами и развитие мышечной массы.
+        </p>
+        <p class="text-sm">Расписание: вт/чт — 19:00</p>
+      </div>
+
+      <!-- Карточка 3 -->
+      <div class="bg-neutral-900 p-6 rounded-xl border border-yellow-600 shadow-lg">
+        <h3 class="text-2xl font-bold mb-2">Йога</h3>
+        <p class="mb-3 text-sm text-yellow-300">
+          Мягкие и глубокие практики для расслабления и тонуса.
+        </p>
+        <p class="text-sm">Расписание: сб — 10:00</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================
+       ТРЕНЕРЫ
+  ========================== -->
+  <section class="p-8 fade-up">
+    <h2 class="text-3xl font-bold text-center mb-8">Наши тренеры</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Тренер 1 -->
+      <div class="bg-neutral-900 p-6 rounded-xl border border-yellow-600 text-center">
+        <!-- Заглушка фото -->
+        <div class="w-24 h-24 bg-yellow-600 rounded-full mx-auto mb-4"></div>
+
+        <h3 class="text-xl font-bold">Иван Петров</h3>
+        <p class="text-sm text-yellow-300">Силовые тренировки • стаж 8 лет</p>
+      </div>
+
+      <!-- Тренер 2 -->
+      <div class="bg-neutral-900 p-6 rounded-xl border border-yellow-600 text-center">
+        <div class="w-24 h-24 bg-yellow-600 rounded-full mx-auto mb-4"></div>
+
+        <h3 class="text-xl font-bold">Мария Крылова</h3>
+        <p class="text-sm text-yellow-300">Йога и растяжка • стаж 5 лет</p>
+      </div>
+
+      <!-- Тренер 3 -->
+      <div class="bg-neutral-900 p-6 rounded-xl border border-yellow-600 text-center">
+        <div class="w-24 h-24 bg-yellow-600 rounded-full mx-auto mb-4"></div>
+
+        <h3 class="text-xl font-bold">Алексей Смирнов</h3>
+        <p class="text-sm text-yellow-300">Функциональный тренинг • стаж 6 лет</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =======================
+       ПРАЙС (пока пустой)
+  ========================== -->
+  <section class="p-8 fade-up" id="price">
+    <h2 class="text-3xl font-bold text-center mb-8">Прайс</h2>
+<!-- Сюда позже вставишь карточки прайса -->
+    <p class="text-center text-yellow-300">Раздел будет заполнен позже…</p>
+  </section>
+
+  <!-- =======================
+       ПОДВАЛ
+  ========================== -->
+  <footer class="p-6 text-center border-t border-yellow-600 text-sm text-yellow-300">
+    © Спортивный клуб «Арена», 2025
+  </footer>
+
+  <!-- =======================
+       JAVASCRIPT — анимации появления
+  ========================== -->
+  <script>
+    // Находим элементы с классом fade-up
+    const animatedElements = document.querySelectorAll('.fade-up');
+
+    // функция, которая показывает элементы при прокрутке
+    function showOnScroll() {
+      const triggerPoint = window.innerHeight * 0.9;
+
+      animatedElements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+
+        if (position < triggerPoint) {
+          el.classList.add('show');
+        }
+      });
+    }
+
+    // Запускаем при прокрутке
+    window.addEventListener('scroll', showOnScroll);
+
+    // И сразу после загрузки страницы
+    showOnScroll();
+  </script>
+
+</body>
+</html>
