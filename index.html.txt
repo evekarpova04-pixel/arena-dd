@@ -86,7 +86,7 @@
        ТРЕНЕРЫ
   ========================== -->
   <section class="p-8 fade-up">
-    <h2 class="text-3xl font-bold text-center mb-8">Наши тренеры</h2>
+    <h2 class="text-3xl font-bold text-center mb-8">Наши сотрудники</h2>
 
     <div class="grid md:grid-cols-3 gap-6">
 
@@ -95,7 +95,7 @@
         <!-- Заглушка фото -->
         <div class="w-24 h-24 bg-yellow-600 rounded-full mx-auto mb-4"></div>
 
-        <h3 class="text-xl font-bold">Иван Петров</h3>
+        <h3 class="text-xl font-bold">Карпова Ольга</h3>
         <p class="text-sm text-yellow-300">Силовые тренировки • стаж 8 лет</p>
       </div>
 
@@ -103,17 +103,10 @@
       <div class="bg-neutral-900 p-6 rounded-xl border border-yellow-600 text-center">
         <div class="w-24 h-24 bg-yellow-600 rounded-full mx-auto mb-4"></div>
 
-        <h3 class="text-xl font-bold">Мария Крылова</h3>
-        <p class="text-sm text-yellow-300">Йога и растяжка • стаж 5 лет</p>
+        <h3 class="text-xl font-bold">Микаелян Лилит</h3>
+        <p class="text-sm text-yellow-300">Лучший администратор • стаж 5 лет</p>
       </div>
 
-      <!-- Тренер 3 -->
-      <div class="bg-neutral-900 p-6 rounded-xl border border-yellow-600 text-center">
-        <div class="w-24 h-24 bg-yellow-600 rounded-full mx-auto mb-4"></div>
-
-        <h3 class="text-xl font-bold">Алексей Смирнов</h3>
-        <p class="text-sm text-yellow-300">Функциональный тренинг • стаж 6 лет</p>
-      </div>
 
     </div>
   </section>
@@ -162,4 +155,5 @@
   </script>
 
 </body>
+
 </html>
